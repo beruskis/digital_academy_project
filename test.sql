@@ -1,3 +1,0 @@
-SELCT * 
-FROM table
-LIMIT 10
