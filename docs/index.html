@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forest Cover Change 1990–2025</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #1a1a2e;
+    }
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    header h1 { font-size: 20px; font-weight: bold; }
+    header p  { font-size: 13px; opacity: 0.75; margin-top: 3px; }
+    .map-container {
+      width: 100%;
+      height: calc(100vh - 80px);
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>🌳 Forest Cover Change 1990–2025</h1>
+      <p>Difference in forest share (percentage points) per country &nbsp;|&nbsp; Source: Our World in Data / World Bank</p>
+    </div>
+  </header>
+  <div class="map-container">
+    <iframe src="forest_change_map.html" title="Interactive forest cover change map"></iframe>
+  </div>
+</body>
+</html>
