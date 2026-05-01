@@ -1,0 +1,15 @@
+﻿country,income_group,region,mean_gdp,forest_change,outlier_category,has_policy,has_legislation,policy_score
+Australia,High income,East Asia & Pacific,40512.67342040289,-0.1400000000000005,rich_deforester,True,True,3
+Belgium,High income,Europe & Central Asia,37312.70818412629,-0.2200000000000024,rich_deforester,True,True,3
+Cayman Islands,High income,Latin America & Caribbean,82972.18096995173,-1.7100000000000009,rich_deforester,True,True,2
+Ghana,Lower middle income,Sub-Saharan Africa,1151.3982847116768,5.490000000000002,poor_reforester,True,True,3
+India,Lower middle income,South Asia,1114.969497147248,2.960000000000001,poor_reforester,True,True,3
+Japan,High income,East Asia & Pacific,37670.55180504389,-0.1200000000000045,rich_deforester,True,True,3
+Nepal,Lower middle income,South Asia,591.6236959503227,3.61,poor_reforester,True,True,2
+Norway,High income,Europe & Central Asia,65035.73704743413,-0.2999999999999971,rich_deforester,True,True,3
+Rwanda,Low income,Sub-Saharan Africa,504.0674476910792,8.009999999999998,poor_reforester,True,True,3
+Sweden,High income,Europe & Central Asia,44188.04362796879,-0.3100000000000023,rich_deforester,True,True,3
+Uzbekistan,Lower middle income,Europe & Central Asia,1385.4404740240027,3.05,poor_reforester,True,True,3
+Brunei,High income,East Asia & Pacific,29356.312431852235,-6.260000000000005,rich_deforester,True,True,2
+Kyrgyzstan,Lower middle income,Europe & Central Asia,864.572511628471,0.6200000000000001,poor_reforester,True,True,3
+South Korea,High income,East Asia & Pacific,21725.38072235309,-2.780000000000001,rich_deforester,True,True,3
