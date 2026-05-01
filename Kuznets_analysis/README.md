@@ -43,18 +43,18 @@ Všechna vstupní data jsou ve složkách `../data_dan/` a `../data_raw/`:
 
 ```
 Kuznets_analysis/
-├── B_ulohy/           ← VÝZVA: prázdné buňky, nápovědy, + řešení zvlášť  
-└── C_kombinovane/     ← NEJLEPŠÍ KOMPROMIS: ukázka vzoru → tvůj úkol
+├── A_ulohy/           ← VÝZVA: prázdné buňky, nápovědy, + řešení zvlášť  
+└── B_kombinovane/     ← NEJLEPŠÍ KOMPROMIS: ukázka vzoru → tvůj úkol
 ```
 
 ### Jak si vybrat?
 
-**B — Úlohy (Samostatná práce)**
+**A — Úlohy (Samostatná práce)**
 - Dostaneš zadání + nápovědu, kód napíšeš sama
 - Řešení je v souboru `*_RESENI.ipynb` — otevři ho až po vlastním pokusu!
 - Ideální pokud: chceš si co nejvíce vyzkoušet
 
-**C — Kombinované (Ukázka + Tvůj tah)**
+**B — Kombinované (Ukázka + Tvůj tah)**
 - Každý nový koncept: nejprve ukázka na jiných datech, pak ty zkusíš analogický úkol
 - Ideální pokud: chceš se učit z příkladů, ale zároveň procvičovat
 

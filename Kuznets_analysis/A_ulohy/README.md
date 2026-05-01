@@ -1,4 +1,4 @@
-# Průvodce složkou B_ulohy
+# Průvodce složkou A_ulohy
 
 ## Styl učení: Samostatná práce (Výzva)
 

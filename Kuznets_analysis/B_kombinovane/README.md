@@ -1,4 +1,4 @@
-# Průvodce složkou C_kombinovane
+# Průvodce složkou B_kombinovane
 
 ## Styl učení: Ukázka vzoru → Tvůj úkol
 
@@ -35,4 +35,4 @@ Každá sekce je rozdělena na dvě části:
 Pokud se zasekneš v TEĎ TY části:
 1. Zkus si přečíst UKÁZKU ještě jednou
 2. Zkus modifikovat UKÁZKU pro tvůj případ
-3. Pak otevři řešení v `../B_ulohy/*_RESENI.ipynb`
+3. Pak otevři řešení v `../A_ulohy/*_RESENI.ipynb`
