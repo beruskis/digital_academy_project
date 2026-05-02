@@ -29,6 +29,15 @@ Tento styl je pro tebe pokud:
 | `03_sql_bonus_ULOHY.ipynb` | SQL bonus — volitelné |
 | `03_sql_bonus_RESENI.ipynb` | Řešení SQL bonusu |
 
+## Co tě čeká: počty úloh
+
+| Notebook | Počet úloh "TVŮJ KÓD ZDE" | Nejtěžší úloha |
+|---|---|---|
+| NB01 — Průzkum dat | 7 úloh | Úloha 6: merge tří zdrojů dat |
+| NB02 — Statistika & EKC | 8 úloh | Úloha 6: peer-group residuál (3 kroky) |
+
+Při prvním průchodu počítej s **3–4 hodinami** na každý notebook (včetně čtení, zkoušení a kontroly výsledků).
+
 ## Tipy pro zaseknutí
 
 1. Přečti chybovou hlášku celou — Python ti říká přesně co je špatně

@@ -19,8 +19,18 @@ Každá sekce je rozdělena na dvě části:
 
 1. Otevři **`01_pruzkum_dat.ipynb`**
 2. Pro každou sekci: nejprve spusť UKÁZKU, pak napiš svůj kód do TEĎ TY buňky
-3. Pokračuj s **`02_statistika_ekc.ipynb`**
-4. Přejdi na **`../PowerBI_pruvodce.md`**
+3. ⚠️ **Na konci NB01 dokonči sekci Export** (TEĎ TY buňka na konci) — bez ní NB02 nenačte data!
+4. Pokračuj s **`02_statistika_ekc.ipynb`**
+5. Přejdi na **`../PowerBI_pruvodce.md`**
+
+## Co tě čeká: struktura sekcí
+
+| Notebook | Počet UKÁZKA+TEĎ TY párů | Nejtěžší sekce |
+|---|---|---|
+| NB01 — Průzkum dat | 6 párů | Sekce 5: merge tří zdrojů |
+| NB02 — Statistika & EKC | 7 párů | Sekce 6: peer-group residuál |
+
+UKÁZKY jsou vždy kratší a na jiných proměnných — tvůj úkol je adaptovat je pro data projektu.
 
 ## Soubory
 

@@ -60,6 +60,49 @@ Kuznets_analysis/
 
 ---
 
+## Srovnání variant z pohledu studentky
+
+> Obě varianty vedou ke **stejným výsledkům a stejným výstupním souborům**. Liší se jen mírou opory při psaní kódu.
+
+### Co tě čeká v každé variantě
+
+| | Varianta A — Úlohy | Varianta B — Kombinované |
+|---|---|---|
+| **Počet notebooků** | 2 × pár (ULOHY + RESENI) | 2 notebooky |
+| **Kód píšeš** | od nuly (s nápovědou) | po vzoru z UKÁZKY |
+| **Záchranná síť** | RESENI notebook hned vedle | UKÁZKA je přímo nad tvým úkolem |
+| **Obtížnost** | vyšší — musíš vymyslet strukturu | nižší — vzor vidíš hned |
+| **Co se naučíš navíc** | číst chyby, ladit kód sám/a | rozpoznávat vzory a aplikovat je |
+| **Přeskočení** | možné — ale RESENI spusť vždy | možné — UKÁZKA funguje samostatně |
+
+### Zkušenost z průchodu variantou A
+
+Varianta A čeká se čtyřmi notebooky (NB01 + NB02, každý ve dvou verzích). Nejsilnější moment nastane u **Úlohy 6 (peer-group residuál)** — zadání je podrobné, ale propojení tří kroků (geografický filtr → mediány skupin → klasifikace) vyžaduje soustředění. Záchranná síť je vždy k dispozici: soubor `*_RESENI.ipynb` leží ve stejné složce.
+
+Postup, který funguje: otevři ULOHY, přečti celé zadání jedné úlohy, zkus napsat kód, porovnej výstup s "Očekávaným výstupem" přímo v zadání — a teprve pak, pokud se zasekneš, otevři RESENI.
+
+### Zkušenost z průchodu variantou B
+
+Varianta B pracuje se dvěma notebooky. Každá sekce vypadá stejně: UKÁZKA na jiných datech → tvůj úkol na datech projektu. Největší pomoc je, že vzorový kód vidíš **přímo nad svou buňkou** — stačí ho adaptovat.
+
+⚠️ **Důležité pro Variantu B**: V Notebooku 01 musíš dokončit **sekci Export** (záložka TEĎ TY na konci NB01) dříve než otevřeš Notebook 02. Notebook 02 čte soubor `../output/ekc_analysis.csv` — ten vznikne právě tímto exportem. Bez toho NB02 selže na prvním načtení dat.
+
+Stráže v kódu (`⚠️ Nejdřív dokonči předchozí buňku...`) ti pohlídají závislosti — pokud vidíš takové varování, vrať se o buňku výš a doplň chybějící kód.
+
+### Výsledky, ke kterým obě varianty dospějí
+
+| Analýza | Výsledek |
+|---|---|
+| Pearsonova korelace (log_gdp vs. forest_change) | r = **0.363**, p < 0.001 |
+| EKC bod zlomu (kvadratická regrese) | **$54 885**/os. |
+| R² kvadratického modelu | **0.146** (14.6 % variance) |
+| Mann-Whitney U test (High vs. Low income) | U = 1594, p < 0.001 → **H1 POTVRZENA** |
+| Kruskal-Wallis test (7 regionů) | H = 62.5, p < 0.001 → **REGIONY SE LIŠÍ** |
+| Počet paradoxních zemí | **8** (3 bohatí odlesňovatelé + 5 chudých zalesňovatelů) |
+| Policy score chudých zalesňovatelů | **3.0/3** (všech 5 zemí: max. skóre) |
+
+---
+
 ## Postup projektu
 
 ```
