@@ -81,6 +81,7 @@ Notebook 02 vytvoří tyto soubory do složky `output/`:
 | `output/ekc_regression_curve.csv` | Body polynomiální regresní křivky | EKC křivka |
 | `output/regional_summary.csv` | Průměry a mediány podle regionu | Q2 sloupcový graf |
 | `output/outliers.csv` | "Paradoxní" země (bohaté kácí, chudé zalesňují) | Q3 analýza |
+| `output/outliers_with_policy.csv` | Paradoxní země + lesní politika + peer-residuál | Q3 tabulka, peer-residuál graf, lesní politika |
 
 ---
 

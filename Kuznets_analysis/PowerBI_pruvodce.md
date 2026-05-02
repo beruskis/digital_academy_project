@@ -34,7 +34,7 @@ Kuznets_analysis/output/
 ├── ekc_analysis.csv           ← hlavní dataset (199 zemí)
 ├── ekc_regression_curve.csv   ← 100 bodů pro EKC křivku
 ├── regional_summary.csv       ← souhrn podle regionů (7 regionů)
-├── outliers.csv               ← paradoxní země (14 zemí)
+├── outliers.csv               ← paradoxní země (8 zemí)
 └── outliers_with_policy.csv   ← paradoxní země + lesní politika
 ```
 
@@ -63,7 +63,7 @@ Nahoře je pás karet podobný Excelu.
 
 ### Krok 2: Import CSV souborů
 
-Budeš importovat 4 soubory. Postup pro každý je stejný:
+Budeš importovat 5 souborů. Postup pro každý je stejný:
 
 1. Na pásu karet klikni na záložku **Home** (Domů)
 2. Klikni na tlačítko **Get Data** (Načíst data) — má ikonu databáze
@@ -80,11 +80,12 @@ Otevře se náhledové okno s několika prvními řádky souboru. Uvidíš, jak 
 **Co uvidíš po kroku 7:**
 Soubor se načte a zavře. Vpravo v panelu **Fields** (Pole) přibude nová tabulka s ikonou tabulky.
 
-Zopakuj kroky 1–7 pro všechny 4 soubory:
+Zopakuj kroky 1–7 pro všechny 5 souborů:
 - `ekc_analysis.csv`
 - `ekc_regression_curve.csv`
 - `regional_summary.csv`
 - `outliers.csv`
+- `outliers_with_policy.csv`
 
 > ⚠️ **Pokud se nezobrazí záhlaví sloupců**: V náhledovém okně klikni na **Transform Data** místo Load. V Power Query editoru klikni na **Use First Row as Headers** (ikona tabulky se šipkou nahoru). Pak **Close & Apply**.
 
@@ -114,19 +115,22 @@ Power BI potřebuje vědět, jak tabulky spolu souvisí — aby filtry fungovaly
 1. Klikni na ikonu **Model** (propojení, třetí ikona vlevo)
 
 **Co uvidíš:**
-Zobrazení se čtyřmi obdélníky (tabulkami). Mezi nimi mohou být automaticky vytvořené spojovací čáry — nebo žádné.
+Zobrazení se pěti obdélníky (tabulkami). Mezi nimi mohou být automaticky vytvořené spojovací čáry — nebo žádné.
 
 2. Vytvoř relaci `ekc_analysis` ↔ `outliers`:
    - Přetáhni sloupec **`code`** z tabulky `ekc_analysis`
    - Přesuň ho na sloupec **`code`** v tabulce `outliers`
    - Pustit (drag & drop)
-   
+
 **Co uvidíš:**
 Zobrazí se dialog **Create relationship** s výběrem sloupců. Ověř, že jsou vybrány správné sloupce (`code` ↔ `code`), pak klikni **OK**.
 
 Mezi oběma tabulkami se objeví tenká čára s čísly `1` a `*` — to označuje relaci One-to-Many.
 
-> ℹ️ Ostatní tabulky (`ekc_regression_curve`, `regional_summary`) v tomto projektu nepotřebují relaci — každá slouží pro samostatnou vizualizaci.
+3. Vytvoř relaci `ekc_analysis` ↔ `outliers_with_policy`:
+   - Stejný postup — přetáhni **`code`** z `ekc_analysis` na **`code`** v `outliers_with_policy`
+
+> ℹ️ Tabulky `ekc_regression_curve` a `regional_summary` nepotřebují relaci — každá slouží pro samostatnou vizualizaci.
 
 ---
 
@@ -261,18 +265,57 @@ Světová mapa, kde tmavší zelená = zalesnění, tmavší červená = odlesn�
 
 ---
 
-### Vizualizace 5: Tabulka "Paradoxů" (Q3)
+### Vizualizace 5: Tabulka paradoxních zemí (Q3)
 
-**Co zobrazuje**: Bohaté země které odlesňují + chudé země které zalesňují.
+**Co zobrazuje**: Bohaté země které odlesňují + chudé země které zalesňují, včetně lesní politiky.
 
 1. Klikni na prázdné místo na plátně
 2. Vyber **Table** (tabulka — ikona mřížky)
-3. Přidej sloupce z `outliers`:
-   - `country`, `income_group`, `region`, `forest_change`, `mean_gdp`, `outlier_category`
+3. Přidej sloupce z tabulky `outliers_with_policy`:
+   - `country`, `income_group`, `region`, `forest_change`, `peer_residual`, `outlier_category`, `policy_score`
 4. Nastav podmíněné formátování pro `forest_change`:
-   - Klikni na `forest_change` v panelu Fields (při vybraném vizuálu) → **Conditional formatting** → **Background color**
+   - Klikni na `forest_change` v panelu Fields → **Conditional formatting** → **Background color**
    - Záporné hodnoty: červená, kladné: zelená, střed: bílá
-5. Seřaď podle `forest_change` vzestupně (největší odlesňovatelé nahoře)
+5. Seřaď podle `peer_residual` sestupně (Vietnam nahoře)
+
+---
+
+### Vizualizace 6: Peer-residuál — odchylka od mediánu skupiny (Q3)
+
+**Co zobrazuje**: O kolik se každá paradoxní země odchyluje od průměru zemí na stejné ekonomické úrovni. Vietnam (+20 pp) je extrémní pozitivní odchylka, Seychelles (−18 pp) negativní.
+
+1. Klikni na prázdné místo na plátně
+2. Vyber **Clustered bar chart** (horizontální sloupcový graf)
+3. Nastav pole z tabulky `outliers_with_policy`:
+   - **Y axis**: `country`
+   - **X axis**: `peer_residual`
+   - **Legend**: `outlier_category`
+4. Přidej referenční čáru x=0:
+   - Format → Analytics → Constant line → Value = `0`
+5. Nastav barvy podle kategorie:
+   - `rich_deforester` → červená (`#d62728`)
+   - `poor_reforester` → zelená (`#2ca02c`)
+6. Seřaď sestupně podle `peer_residual` (Vietnam na vrchu)
+
+**Očekávaný výsledek**: 8 vodorovných pruhů — 5 zelených nad nulou (chudí zalesňovatelé), 3 červené pod nulou (bohatí odlesňovatelé).
+
+---
+
+### Vizualizace 7: Lesní politika paradoxních zemí (Q3)
+
+**Co zobrazuje**: Průměrný `policy_score` pro chudé zalesňovatelé (3.0) vs. bohaté odlesňovatelé (2.67). Referenční čára = globální průměr 2.30.
+
+1. Klikni na prázdné místo na plátně
+2. Vyber **Clustered bar chart**
+3. Nastav pole z tabulky `outliers_with_policy`:
+   - **X axis**: `outlier_category`
+   - **Y axis**: `policy_score` → ověř, že agregace je nastavena na **Average** (Průměr)
+4. Přidej referenční čáru y=2.30:
+   - Format → Analytics → Constant line → Value = `2.30`
+   - Nastav popis: "Globální průměr"
+5. Nastav barvy (stejné jako Vizualizace 6)
+
+**Očekávaný výsledek**: Dva pruhy — `poor_reforester` (3.0) výrazně nad referenční čarou, `rich_deforester` (2.67) mírně nad ní.
 
 ---
 
