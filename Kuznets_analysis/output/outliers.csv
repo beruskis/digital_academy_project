@@ -1,0 +1,9 @@
+﻿country,code,forest_1990,forest_2025,forest_change,mean_gdp,region,income_group,log_gdp,peer_residual,outlier_category
+American Samoa,ASM,90.35,79.25,-11.099999999999994,11575.37566019524,East Asia & Pacific,High income,9.356635332872314,-12.309999999999993,rich_deforester
+Bhutan,BTN,65.72,70.13,4.409999999999997,1840.3187385824024,South Asia,Lower middle income,7.5176940630913185,7.239999999999995,poor_reforester
+Ghana,GHA,25.52,31.01,5.490000000000002,1151.3982847116768,Sub-Saharan Africa,Lower middle income,7.048732382499134,8.32,poor_reforester
+Rwanda,RWA,17.71,25.72,8.009999999999998,504.0674476910792,Sub-Saharan Africa,Low income,6.222710083901519,12.389999999999997,poor_reforester
+Seychelles,SYC,74.2,57.65,-16.550000000000004,11649.644323688832,Sub-Saharan Africa,High income,9.363030928372329,-17.760000000000005,rich_deforester
+Vietnam,VNM,29.91,47.19,17.279999999999998,1593.682662959924,East Asia & Pacific,Lower middle income,7.373802757322339,20.109999999999996,poor_reforester
+Brunei,BRN,78.37,72.11,-6.260000000000005,29356.312431852235,East Asia & Pacific,High income,10.28726287647016,-7.470000000000004,rich_deforester
+Cape Verde,CPV,8.31,12.67,4.359999999999999,2685.196260730336,Sub-Saharan Africa,Lower middle income,7.895509099515711,7.189999999999998,poor_reforester
