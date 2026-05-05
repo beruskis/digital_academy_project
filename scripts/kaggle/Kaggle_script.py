@@ -33,5 +33,5 @@ engine = create_engine(
     f"mssql+pyodbc://{DB_USER}:{DB_PASSWORD}@{DB_HOST},3033/{DB_NAME}"
     f"?driver=ODBC+Driver+17+for+SQL+Server&TrustServerCertificate=yes"
 )
-df.to_sql(TABLE_NAME, con=engine, if_exists="replace", index=False)
+df.to_sql(TABLE_NAME, con=engine, if_exists="replace", index=False, schema="raw")
 print("Done!")
