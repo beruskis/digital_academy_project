@@ -7,9 +7,9 @@ from sqlalchemy import create_engine
 # create_engine -> helps Python connect to databases
 
 # --- SETTINGS ---
-KAGGLE_DATASET = "ashyou09/global-deforestation-and-afforestation-2000-2025"  #Kaggle url part which goes after www.kaggle.com/datasets/.You can change it for anything you want from Kaggle.
+KAGGLE_DATASET = "andradaolteanu/country-mapping-iso-continent-region"  #Kaggle url part which goes after www.kaggle.com/datasets/.You can change it for anything you want from Kaggle.
 DOWNLOAD_DIR   = "/Users/beruska/Desktop/kaggle" # change the path to a folder where the CSV file will be saved.
-TABLE_NAME     = "Forest_watch"               # name of the SQL table that you want to create
+TABLE_NAME     = "Country_mapping"               # name of the SQL table that you want to create
 
 DB_HOST     = "db.czechitas.online"  # server address
 DB_NAME     = "db_forestgdp"         # database
@@ -25,7 +25,7 @@ kaggle.api.dataset_download_files(KAGGLE_DATASET, path=DOWNLOAD_DIR, unzip=True)
 # Downloads the dataset from Kaggle and saves it into the "....." folder in your PC
 
 #2. READS THE FILE
-df = pd.read_csv(os.path.join(DOWNLOAD_DIR, "global_deforestation_2000_2025.csv"))
+df = pd.read_csv(os.path.join(DOWNLOAD_DIR, "continents2.csv"))
 #change the filename for what you have - check your DOWNLOAD_DIR folder after first run
 
 #3. UPLOAD DATA TO DB
