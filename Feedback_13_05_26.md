@@ -46,7 +46,7 @@ Tabulka s výsledky modelu je správná, každopádně vizualizace (scatter plot
 
 ---
 
-## Datová kvalita — Barbara
+## Datová kvalita — Barbara -> FIXED (pridaný koment, aby to bolo v dokumente jasné)
 
 ### Tři věci v databázi, které stojí za zkontrolování nebo opravu
 
@@ -60,7 +60,7 @@ fact_gdp:    1990–2024
 
 Při joinu obou tabulek se řádky za rok 2025 tiše ztratí — žádná chyba, ale potenciálně matoucí, dobré na to myslet.
 
-**2. Grónsko je vyloučeno z analýzy subregionů, ale ne z regionů**
+**2. Grónsko je vyloučeno z analýzy subregionů, ale ne z regionů** -> FIXED (vyradený z regiónov taktiež + koment v dokumentácii prečo)
 
 V [`Statistics_accross_subregions.ipynb`](scripts/statistics/Statistics_accross_subregions.ipynb):
 ```python
@@ -69,7 +69,7 @@ df_europe = df_europe[df_europe["country_code"] != "GRL"]
 
 Proč je Grónsko specificky vyřazené? Pokud jde o outliera, měl by být vyloučen konzistentně ve všech noteboocích — nebo by mělo být v kódu vysvětleno, proč jen tady. Nebo to aspoň řekněte mně, protože mě to zajímá :)
 
-**3. Zvláštní kombinace region × subregion v `dim_country`**
+**3. Zvláštní kombinace region × subregion v `dim_country`** -> FIXED (nevyžaduje zmenu, je to zámerné, pretože sú to edge cases od WB.)
 
 Ve verifikačním dotazu v [`02_dim-tables.ipynb`](scripts/database/02_dim-tables.ipynb) jsou tyhle kombinace:
 
@@ -80,6 +80,9 @@ Ve verifikačním dotazu v [`02_dim-tables.ipynb`](scripts/database/02_dim-table
 | North America | Caribbean | 1 |
 
 Stojí za to zjistit, o které země jde a jestli jde o chybu ve zdrojovém mapping souboru nebo jde o záměrnou klasifikaci. Výsledky analýzy to pravděpodobně neovlivní, ale je dobré to mít zmapované.
+
+## RESPONSE: 
+All three are World Bank classification edge cases, not mapping errors. Greenland was excluded from subregion analysis specifically because its region/subregion combination (Europe & Central Asia / North America) makes it an outlier that would distort European subregion statistics. It remains included in regional analysis under Europe & Central Asia.
 
 ---
 
@@ -96,7 +99,7 @@ Samo o sobě ničemu nevadí, ale kdybys zkoušela vizualizaci EKC křivky, nara
 
 ---
 
-### Řádkový UPDATE místo hromadného — Barbara ([`Add foest_change_pct_column.ipynb`](scripts/database/Add%20foest_change_pct_column.ipynb))
+### Řádkový UPDATE místo hromadného — Barbara ([`Add foest_change_pct_column.ipynb`](scripts/database/Add%20foest_change_pct_column.ipynb)) 
 
 ```python
 for index, row in df_update.iterrows():
@@ -107,7 +110,7 @@ Takhle se spustí ~7 500 individuálních SQL dotazů jeden po druhém. Funguje 
 
 ---
 
-### Překlepy v názvech souborů — Barbara
+### Překlepy v názvech souborů — Barbara -> FIXED
 
 - [`Add foest_change_pct_column.ipynb`](scripts/database/Add%20foest_change_pct_column.ipynb) → správně `forest`
 - [`Statistics_accross_subregions.ipynb`](scripts/statistics/Statistics_accross_subregions.ipynb) → správně `across`
