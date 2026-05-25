@@ -1,9 +1,0 @@
-﻿country,income_group,region,mean_gdp,forest_change,peer_residual,outlier_category,has_policy,has_legislation,policy_score
-American Samoa,High income,East Asia & Pacific,11575.37566019524,-11.099999999999994,-12.309999999999993,rich_deforester,True,True,3
-Bhutan,Lower middle income,South Asia,1840.3187385824024,4.409999999999997,7.239999999999995,poor_reforester,True,True,3
-Ghana,Lower middle income,Sub-Saharan Africa,1151.3982847116768,5.490000000000002,8.32,poor_reforester,True,True,3
-Rwanda,Low income,Sub-Saharan Africa,504.0674476910792,8.009999999999998,12.389999999999997,poor_reforester,True,True,3
-Seychelles,High income,Sub-Saharan Africa,11649.644323688832,-16.550000000000004,-17.760000000000005,rich_deforester,True,True,3
-Vietnam,Lower middle income,East Asia & Pacific,1593.682662959924,17.279999999999998,20.109999999999996,poor_reforester,True,True,3
-Brunei,High income,East Asia & Pacific,29356.312431852235,-6.260000000000005,-7.470000000000004,rich_deforester,True,True,2
-Cape Verde,Lower middle income,Sub-Saharan Africa,2685.196260730336,4.359999999999999,7.189999999999998,poor_reforester,True,True,3

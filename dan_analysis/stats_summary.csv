@@ -1,9 +1,0 @@
-﻿Stat,Value,Note
-N countries,199.0,countries in Q1 dataset
-Spearman r,0.4116,log_GDP vs Forest_change
-Spearman p-value,0.0,< 0.05 = significant
-Pearson r,0.3623,log_GDP vs Forest_change
-Linear R2,0.1312,linear regression fit
-Quadratic R2,0.1453,EKC quadratic fit
-Linear slope,1.7027,+x = richer means more forest
-Quadratic coeff x2,-0.3607,+x2 = U-shape supports EKC
