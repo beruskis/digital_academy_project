@@ -215,15 +215,13 @@ Clean_GDP_country_names.ipynb is a one-time preprocessing step for the GDP sourc
 | Q3 — Outlier identification | ✅ Done |
 | Q3a — Outlier deep dive | ✅ Done |
 | Q4 — Population density | ✅ Done |
-| Q2 final comparison (GDP vs regions R²) | ✅ Done |
-| Power BI dashboard | ✅ Done (v5) |
+| Power BI dashboard | ✅ Done (Final_report) |
 | Blog post (Czech) | ✅ Done (published on Medium) |
 
 ---
 
 ## Links
 
-- [Jira Project Board](#) *(add link)*
 - [Final Blog Post](https://medium.com/@beruska.jassova/vliv-ekonomického-rozvoje-států-na-plochu-lesů-964d17bf103b?postPublishedType=repub)
 
 ---
